@@ -20,6 +20,10 @@ const TopNavbar = () => {
         fontWeight='bold'
         color='cyan.400'
         alignSelf={'center'}
+        onClick={() => (window.location.href = '/')}
+        _hover={{
+          cursor: 'pointer',
+        }}
       >
         KL 01 SPORTS
       </Heading>

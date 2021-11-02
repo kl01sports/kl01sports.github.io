@@ -7,38 +7,30 @@ import {
 } from '@chakra-ui/react';
 import { useEffect, useState } from 'react';
 import Data from './data.json';
-import { ICategory, ICategoryList } from './Interfaces';
+import { ICategory, IData } from './Interfaces';
 import ProductCard from './ProductCard';
 
 const CategoryList = () => {
   const [isNotSmallerScreen] = useMediaQuery('(min-width:600px)');
-  const [categoryData, setCategoryData] = useState<ICategoryList>();
+  const [categoryData, setCategoryData] = useState<IData>();
 
-  // const getProducts = () => {
-  //   fetch(
-  //     'https://raw.githubusercontent.com/maheshmj24/dynamic-formik/main/src/components/DynamicForm/formSchema.json',
-  //     {
-  //       method: 'GET',
-  //       // mode: 'no-cors',
-  //       headers: {
-  //         'Content-Type': 'application/json',
-  //         Accept: 'application/json',
-  //       },
-  //     }
-  //   )
-  //     .then((response) => response.json())
-  //     .then((data) => {
-  //       const products = JSON.parse(data.message);
-  //       setProductData(products);
-  //     });
-  //   console.log('test');
-  // };
+  const getProducts = () => {
+    fetch(
+      'https://raw.githubusercontent.com/kl01sports/kl01sports.github.io/maheshmj24/features/src/components/data.json',
+      {
+        method: 'GET',
+      }
+    )
+      .then((response) => response.json())
+      .then((data) => {
+        setCategoryData(data);
+      });
+    console.log('test');
+  };
 
   useEffect(() => {
     // getProducts();
-    //const test: IProducts = ProductsJSON;
     setCategoryData(Data);
-    // console.log(categoryData);
   }, []);
 
   return (

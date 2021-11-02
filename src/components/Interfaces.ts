@@ -1,4 +1,4 @@
-export interface ICategoryList {
+export interface IData {
   categories: ICategory[];
 }
 
