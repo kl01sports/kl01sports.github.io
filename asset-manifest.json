@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.js": "/static/js/main.3ffb79fe.chunk.js",
-    "main.js.map": "/static/js/main.3ffb79fe.chunk.js.map",
+    "main.js": "/static/js/main.ac15b9ec.chunk.js",
+    "main.js.map": "/static/js/main.ac15b9ec.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.2f423cf3.js",
     "runtime-main.js.map": "/static/js/runtime-main.2f423cf3.js.map",
-    "static/js/2.11c5b798.chunk.js": "/static/js/2.11c5b798.chunk.js",
-    "static/js/2.11c5b798.chunk.js.map": "/static/js/2.11c5b798.chunk.js.map",
+    "static/js/2.1c45720a.chunk.js": "/static/js/2.1c45720a.chunk.js",
+    "static/js/2.1c45720a.chunk.js.map": "/static/js/2.1c45720a.chunk.js.map",
     "static/js/3.448a460b.chunk.js": "/static/js/3.448a460b.chunk.js",
     "static/js/3.448a460b.chunk.js.map": "/static/js/3.448a460b.chunk.js.map",
     "index.html": "/index.html",
-    "static/js/2.11c5b798.chunk.js.LICENSE.txt": "/static/js/2.11c5b798.chunk.js.LICENSE.txt",
+    "static/js/2.1c45720a.chunk.js.LICENSE.txt": "/static/js/2.1c45720a.chunk.js.LICENSE.txt",
     "static/media/tee.6a1151c1.jpg": "/static/media/tee.6a1151c1.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.2f423cf3.js",
-    "static/js/2.11c5b798.chunk.js",
-    "static/js/main.3ffb79fe.chunk.js"
+    "static/js/2.1c45720a.chunk.js",
+    "static/js/main.ac15b9ec.chunk.js"
   ]
 }
