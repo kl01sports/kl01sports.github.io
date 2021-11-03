@@ -61,7 +61,7 @@ const CategoryList = () => {
                 cursor: 'pointer',
               }}
               onClick={() =>
-                (window.location.href = '/products?category=' + category.id)
+                (window.location.href = '#/products?category=' + category.id)
               }
             >
               <ProductCard

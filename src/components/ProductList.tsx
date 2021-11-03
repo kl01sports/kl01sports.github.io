@@ -7,6 +7,7 @@ import {
   VStack,
 } from '@chakra-ui/react';
 import React, { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import Data from './data.json';
 import { ICategory, IProduct } from './Interfaces';
 import ProductCard from './ProductCard';
@@ -23,9 +24,10 @@ const ProductList = () => {
     setProductData(categoryData);
   };
 
+  const location = useLocation();
+
   useEffect(() => {
-    // let category: string;
-    const queryParameters = new URLSearchParams(window.location.search);
+    const queryParameters = new URLSearchParams(location.search);
     if (queryParameters && queryParameters.get('category')) {
       const category = queryParameters.get('category');
       if (category) getProducts(category);
