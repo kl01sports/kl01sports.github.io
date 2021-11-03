@@ -6,7 +6,7 @@ import {
   useMediaQuery,
 } from '@chakra-ui/react';
 import { useEffect, useState } from 'react';
-import Data from './data.json';
+// import Data from './data.json';
 import { ICategory, IData } from './Interfaces';
 import ProductCard from './ProductCard';
 
@@ -15,22 +15,18 @@ const CategoryList = () => {
   const [categoryData, setCategoryData] = useState<IData>();
 
   const getProducts = () => {
-    fetch(
-      'https://raw.githubusercontent.com/kl01sports/kl01sports.github.io/maheshmj24/features/src/components/data.json',
-      {
-        method: 'GET',
-      }
-    )
+    fetch('https://raw.githubusercontent.com/kl01sports/data/main/data.json', {
+      method: 'GET',
+    })
       .then((response) => response.json())
       .then((data) => {
         setCategoryData(data);
       });
-    console.log('test');
   };
 
   useEffect(() => {
-    // getProducts();
-    setCategoryData(Data);
+    getProducts();
+    // setCategoryData(Data);
   }, []);
 
   return (

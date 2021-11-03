@@ -8,8 +8,8 @@ import {
 } from '@chakra-ui/react';
 import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
-import Data from './data.json';
 import { ICategory, IProduct } from './Interfaces';
+// import Data from './data.json';
 import ProductCard from './ProductCard';
 import TopNavbar from './TopNavBar';
 
@@ -18,10 +18,22 @@ const ProductList = () => {
   const [productData, setProductData] = useState<ICategory>();
 
   const getProducts = (category: string) => {
-    const categoryData = Data.categories.find(
-      (c: ICategory) => c.id === category
-    );
-    setProductData(categoryData);
+    fetch('https://raw.githubusercontent.com/kl01sports/data/main/data.json', {
+      method: 'GET',
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        const categoryData = data.categories.find(
+          (c: ICategory) => c.id === category
+        );
+        setProductData(categoryData);
+      });
+
+    //Testing purposes
+    // const categoryData = Data.categories.find(
+    //   (c: ICategory) => c.id === category
+    // );
+    // setProductData(categoryData);
   };
 
   const location = useLocation();
@@ -32,7 +44,7 @@ const ProductList = () => {
       const category = queryParameters.get('category');
       if (category) getProducts(category);
     }
-  }, []);
+  }, [location.search]);
 
   return (
     <VStack pt={0}>
