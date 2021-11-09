@@ -6,7 +6,7 @@ import TopNavbar from './TopNavBar';
 
 const Home = () => {
   return (
-    <VStack pt={0}>
+    <VStack p={0}>
       <TopNavbar></TopNavbar>
       <Hero></Hero>
       <CategoryList></CategoryList>

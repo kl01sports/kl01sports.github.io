@@ -54,21 +54,18 @@ const ProductList = () => {
         <Flex
           direction={isNotSmallerScreen ? 'row' : 'column'}
           spacing='200px'
-          pt={isNotSmallerScreen ? '12' : '0'}
-          pl={isNotSmallerScreen ? '12' : '0'}
-          pr={isNotSmallerScreen ? '12' : '0'}
-          // pb={isNotSmallerScreen ? '12' : '0'}
+          p={{ base: '3', md: '6' }}
           alignSelf='flex-start'
         >
-          <Box mt={isNotSmallerScreen ? '0' : 16} align='flex-start'>
+          <Box mt={{ base: '1', md: '4' }} align='flex-start'>
             <Heading>{productData?.name} </Heading>
           </Box>
         </Flex>
         <SimpleGrid
-          columns={3}
-          // minChildWidth='28vw'
-          spacing={10}
-          p={isNotSmallerScreen ? '12' : '0'}
+          columns={{ base: 1, md: 3 }}
+          // minChildWidth='300px'
+          spacing='50px'
+          p={{ base: '2', md: '4' }}
         >
           {productData?.products?.map((product: IProduct) => {
             return (

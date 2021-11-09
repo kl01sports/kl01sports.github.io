@@ -13,9 +13,9 @@ const TopNavbar = () => {
   const isDark = colorMode === 'dark';
 
   return (
-    <Flex w='100%' p={5}>
+    <Flex w='100%' p={{ base: 2, md: 5 }}>
       <Heading
-        ml='8'
+        ml={{ base: 4, md: 8 }}
         size='md'
         fontWeight='bold'
         color='cyan.400'
@@ -31,14 +31,14 @@ const TopNavbar = () => {
 
       <IconButton
         aria-label=''
-        ml={2}
+        ml={{ base: 1, md: 2 }}
         icon={<FaInstagram />}
         isRound={true}
         onClick={() => window.open('https://www.instagram.com/abhiram_hari_/')}
       ></IconButton>
       <IconButton
         aria-label=''
-        ml={2}
+        ml={{ base: 1, md: 2 }}
         icon={<FaWhatsapp />}
         isRound={true}
         onClick={() =>
@@ -48,7 +48,7 @@ const TopNavbar = () => {
 
       <IconButton
         aria-label=''
-        ml={8}
+        ml={{ base: 4, md: 8 }}
         icon={isDark ? <FaSun /> : <FaMoon />}
         isRound={true}
         onClick={toggleColorMode}

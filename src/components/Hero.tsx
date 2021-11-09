@@ -1,5 +1,4 @@
 import {
-  Button,
   Flex,
   Stack,
   Text,
@@ -12,12 +11,8 @@ const Hero = () => {
   return (
     <Flex
       w={'full'}
-      h={'40vh'}
-      backgroundImage={
-        // 'url(https://images.unsplash.com/photo-1600267175161-cfaa711b4a81?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80)'
-        // 'url(https://drive.google.com/file/d/143X6gpWMnBoK_W1uXbTbI6QEgyD6LMoU/view?usp=sharing)'
-        Logo
-      }
+      h={{ base: '300px', md: '400px' }}
+      backgroundImage={Logo}
       backgroundSize={'cover'}
       backgroundPosition={'center center'}
     >
@@ -28,17 +23,22 @@ const Hero = () => {
         px={useBreakpointValue({ base: 4, md: 8 })}
         bgGradient={'linear(to-r, blackAlpha.600, transparent)'}
       >
-        <Stack maxW={'2xl'} align={'flex-start'} spacing={6}>
+        <Stack
+          maxW={{ base: '50%', md: '40%' }}
+          align={'flex-start'}
+          spacing={6}
+        >
           <Text
             color={'white'}
             fontWeight={700}
             lineHeight={1.2}
-            fontSize={useBreakpointValue({ base: '3xl', md: '4xl' })}
+            fontSize={{ base: '2xl', md: '4xl' }}
+            // maxW='30vw'
           >
-            Lorem ipsum dolor sit amet consectetur adipiscing elit sed do
-            eiusmod tempor
+            Welcome to KL 01 SPORTS, <br />
+            your go to place for quality jerseys.
           </Text>
-          <Stack direction={'row'}>
+          {/* <Stack direction={'row'}>
             <Button
               bg={'blue.400'}
               rounded={'full'}
@@ -55,7 +55,7 @@ const Hero = () => {
             >
               Show me more
             </Button>
-          </Stack>
+          </Stack> */}
         </Stack>
       </VStack>
     </Flex>
