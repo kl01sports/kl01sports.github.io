@@ -43,7 +43,7 @@ const ProductCard = (props: IProductCard) => {
           objectFit='cover'
           w='100%'
           h='400px'
-          fallback={<Box w='100%' h='70%' background='black'></Box>}
+          fallback={<Box w='100%' h='400px' background='black'></Box>}
         />
 
         <Box p='6'>
